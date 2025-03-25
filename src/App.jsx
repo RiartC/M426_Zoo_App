@@ -1,6 +1,11 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./Navbar";
+import Impressum from "./Impressum";
+import Datenschutzhinweise from "./Datenschutzhinweise";
+import "./App.css";
 
-function App() {
+function Home() {
     return (
         <div className="min-h-screen flex flex-col items-center bg-green-100 p-6">
             <h1 className="text-3xl font-bold text-green-700">Willkommen im Zoo</h1>
@@ -19,7 +24,7 @@ function App() {
 
             <div className="mt-6 w-full max-w-md bg-white p-4 shadow-md rounded-lg text-center">
                 <h2 className="text-2xl font-semibold text-green-700">Adresse</h2>
-                <p className="mt-2 text-gray-700">Wildlife Zoo, Hauptstraße 123, 12345 Musterstadt</p>
+                <p className="mt-2 text-gray-700">Zoo, Hauptstraße 123, 8408/8405 Winterthur</p>
             </div>
 
             <div className="mt-6 w-full max-w-md bg-white p-4 shadow-md rounded-lg text-center">
@@ -34,6 +39,19 @@ function App() {
                 <p className="mt-2 text-gray-700">Kostenlose Parkplätze vorhanden. Barrierefreier Zugang. Tägliche Fütterungen um 12:00 Uhr.</p>
             </div>
         </div>
+    );
+}
+
+function App() {
+    return (
+        <Router>
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/impressum" element={<Impressum />} />
+                <Route path="/datenschutz" element={<Datenschutzhinweise />} />
+            </Routes>
+        </Router>
     );
 }
 
