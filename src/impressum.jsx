@@ -9,7 +9,7 @@ const Impressum = () => {
             <p>Land: Schweiz</p>
 
             <h2 className="text-xl font-semibold mt-4">Kontakt</h2>
-            <p>Telefon: +49 123 456789</p>
+            <p>Telefon: +41 123 45 67</p>
             <p>E-Mail: riart.cekaj@stud.kbw.ch, fabian.ott1@stud.kbw.ch</p>
         </div>
     );
