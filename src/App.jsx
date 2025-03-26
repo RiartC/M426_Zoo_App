@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Impressum from "./Impressum";
 import Datenschutzhinweise from "./Datenschutzhinweise";
 import "./App.css";
+import Tierinfo from "./Tierinfo.jsx";
 
 function Home() {
     return (
@@ -50,6 +51,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/impressum" element={<Impressum />} />
                 <Route path="/datenschutz" element={<Datenschutzhinweise />} />
+                <Route path="/tierinfo" element={<Tierinfo />} />
             </Routes>
         </Router>
     );

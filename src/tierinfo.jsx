@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const tierinfo = ({ name, bild, beschreibung, lebensraum }) => {
+const Tierinfo = ({ name, bild, beschreibung, lebensraum }) => {
     const [zeigeDetails, setZeigeDetails] = useState(false);
 
     const handleKlick = () => {
@@ -21,4 +21,4 @@ const tierinfo = ({ name, bild, beschreibung, lebensraum }) => {
     );
 };
 
-export default tierinfo;
+export default Tierinfo;
