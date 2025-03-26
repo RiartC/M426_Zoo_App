@@ -40,7 +40,49 @@ const Zoo = () => {
             bild: "https://source.unsplash.com/400x300/?giraffe",
             beschreibung: "Giraffen sind die höchsten Landtiere der Welt.",
             lebensraum: "Offene Waldlandschaften und Savannen"
-        }
+        },
+        {
+            name: "Alpaka",
+            bild: "https://source.unsplash.com/400x300/?alpaka",
+            beschreibung: "Alpaka",
+            lebensraum: ""
+        },
+        {
+            name: "blauer Segelflossendoktorfisch",
+            bild: "https://source.unsplash.com/400x300/?blauerSegelflossendoktorfisch",
+            beschreibung: "blauer Segelflossendoktorfisch",
+            lebensraum: ""
+        },
+        {
+            name: "Flamingo",
+            bild: "https://source.unsplash.com/400x300/?flamingo",
+            beschreibung: "Flamingo",
+            lebensraum: ""
+        },
+        {
+            name: "Gorilla",
+            bild: "https://source.unsplash.com/400x300/?gorilla",
+            beschreibung: "Gorilla",
+            lebensraum: ""
+        },
+        {
+            name: "Mausmaki",
+            bild: "https://source.unsplash.com/400x300/?mausmaki",
+            beschreibung: "Mausmaki",
+            lebensraum: ""
+        },
+        {
+            name: "Seehund",
+            bild: "https://source.unsplash.com/400x300/?seehund",
+            beschreibung: "Seehund",
+            lebensraum: ""
+        },
+        {
+            name: "Braunbär",
+            bild: "https://source.unsplash.com/400x300/?braunbär",
+            beschreibung: "Braunbär",
+            lebensraum: ""
+        },
     ];
 
     return (
