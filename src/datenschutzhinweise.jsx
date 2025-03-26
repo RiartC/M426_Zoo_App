@@ -12,8 +12,7 @@ const datenschutzhinweise = () => {
 
             <h2 className="text-xl font-semibold mt-6 mb-2">1. Verantwortliche Stelle</h2>
             <p className="mb-4">
-                Verantwortlich für die Datenverarbeitung ist: [Ihr Unternehmen] [Adresse]
-                [Kontaktinformationen].
+                Verantwortlich für die Datenverarbeitung ist: Zoo Musterstrasse 123.
             </p>
 
             <h2 className="text-xl font-semibold mt-6 mb-2">2. Erhobene Daten</h2>
@@ -22,9 +21,9 @@ const datenschutzhinweise = () => {
                 Umfang, darunter:
             </p>
             <ul className="list-disc pl-6 mb-4">
-                <li>Kontaktdaten (z.B. Name, E-Mail-Adresse)</li>
-                <li>Nutzungsdaten (z.B. besuchte Seiten, IP-Adresse)</li>
-                <li>Kommunikationsdaten (z.B. Anfragen, Support-Tickets)</li>
+                <li>Kontaktdaten</li>
+                <li>Nutzungsdaten besuchte Seiten, IP-Adresse</li>
+                <li>Kommunikationsdaten Anfragen, Support-Tickets</li>
             </ul>
 
             <h2 className="text-xl font-semibold mt-6 mb-2">3. Zwecke der Datenverarbeitung</h2>
