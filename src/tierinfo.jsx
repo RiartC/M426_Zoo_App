@@ -1,97 +1,73 @@
 import React, { useState } from "react";
+import alpaka from "./assets/bilder/alpaka.jpg";
+import blauersd from "./assets/bilder/blauer segelflossen doktorfisch.jpg";
+import baer from "./assets/bilder/braunbär.jpg";
+import elefant from "./assets/bilder/elefant.jpg";
+import flamingo from "./assets/bilder/flamingo.jpg";
+import giraffe from "./assets/bilder/giraffe.jpg";
+import gorilla from "./assets/bilder/gorilla.jpg";
+import loewe from "./assets/bilder/löwe.jpg";
+import mausmaki from "./assets/bilder/mausmaki.jpg";
+import seehund from "./assets/bilder/seehund.jpg";
 
-const Tierinfo = ({ name, bild, beschreibung, lebensraum }) => {
-    const [zeigeDetails, setZeigeDetails] = useState(false);
-
-    const handleKlick = () => {
-        setZeigeDetails(!zeigeDetails);
-    };
+const TierCard = ({ name, bild, beschreibung, lebensraum }) => {
+    const [gekippt, setGekippt] = useState(false);
 
     return (
-        <div className="border rounded-lg p-4 shadow-md cursor-pointer" onClick={handleKlick}>
-            <img src={bild} alt={`Bild von ${name}`} className="w-full h-40 object-cover rounded-md" />
-            <h2 className="text-xl font-bold mt-2">{name}</h2>
-            {zeigeDetails && (
-                <div className="mt-2">
-                    <p>{beschreibung}</p>
-                    <p><strong>Lebensraum:</strong> {lebensraum}</p>
+        <div
+            className="relative w-48 h-64 cursor-pointer perspective"
+            onClick={() => setGekippt(!gekippt)}
+        >
+            <div className={`transition-transform duration-500 transform-style-preserve-3d ${gekippt ? "rotate-y-180" : ""}`}>
+                {/* Vorderseite */}
+                <div className="absolute w-full h-full backface-hidden border rounded-lg shadow-lg p-4 bg-white flex flex-col items-center">
+                    <img
+                        src={bild}
+                        alt={name}
+                        width="180"
+                        height="120"
+                        style={{ objectFit: "cover", borderRadius: "8px" }}
+                    />
+                    <h2 className="text-lg font-bold text-center mt-2">{name}</h2>
                 </div>
-            )}
+
+                {/* Rückseite */}
+                <div className="absolute w-full h-full backface-hidden rotate-y-180 border rounded-lg shadow-lg p-4 bg-blue-100 flex flex-col items-center justify-center">
+                    <p className="text-sm">{beschreibung}</p>
+                    <p className="text-sm mt-2"><strong>Lebensraum:</strong> {lebensraum || "Unbekannt"}</p>
+                </div>
+            </div>
         </div>
     );
 };
 
 const Zoo = () => {
     const tiere = [
-        {
-            name: "Löwe",
-            bild: "https://source.unsplash.com/400x300/?lion",
-            beschreibung: "Der Löwe ist eine große Raubkatze aus Afrika.",
-            lebensraum: "Savannen und Grasländer"
-        },
-        {
-            name: "Elefant",
-            bild: "https://source.unsplash.com/400x300/?elephant",
-            beschreibung: "Elefanten sind die größten lebenden Landsäugetiere.",
-            lebensraum: "Wälder, Savannen und Grasländer"
-        },
-        {
-            name: "Giraffe",
-            bild: "https://source.unsplash.com/400x300/?giraffe",
-            beschreibung: "Giraffen sind die höchsten Landtiere der Welt.",
-            lebensraum: "Offene Waldlandschaften und Savannen"
-        },
-        {
-            name: "Alpaka",
-            bild: "https://source.unsplash.com/400x300/?alpaka",
-            beschreibung: "Alpaka",
-            lebensraum: ""
-        },
-        {
-            name: "blauer Segelflossendoktorfisch",
-            bild: "https://source.unsplash.com/400x300/?blauerSegelflossendoktorfisch",
-            beschreibung: "blauer Segelflossendoktorfisch",
-            lebensraum: ""
-        },
-        {
-            name: "Flamingo",
-            bild: "https://source.unsplash.com/400x300/?flamingo",
-            beschreibung: "Flamingo",
-            lebensraum: ""
-        },
-        {
-            name: "Gorilla",
-            bild: "https://source.unsplash.com/400x300/?gorilla",
-            beschreibung: "Gorilla",
-            lebensraum: ""
-        },
-        {
-            name: "Mausmaki",
-            bild: "https://source.unsplash.com/400x300/?mausmaki",
-            beschreibung: "Mausmaki",
-            lebensraum: ""
-        },
-        {
-            name: "Seehund",
-            bild: "https://source.unsplash.com/400x300/?seehund",
-            beschreibung: "Seehund",
-            lebensraum: ""
-        },
-        {
-            name: "Braunbär",
-            bild: "https://source.unsplash.com/400x300/?braunbär",
-            beschreibung: "Braunbär",
-            lebensraum: ""
-        },
+        { name: "Löwe", bild: loewe, beschreibung: "Große Raubkatze aus Afrika.", lebensraum: "Savannen" },
+        { name: "Elefant", bild: elefant, beschreibung: "Größtes Landsäugetier.", lebensraum: "Savannen & Wälder" },
+        { name: "Giraffe", bild: giraffe, beschreibung: "Höchstes Landtier der Welt.", lebensraum: "Savannen" },
+        { name: "Alpaka", bild: alpaka, beschreibung: "Sanftmütiges Nutztier aus Südamerika.", lebensraum: "Anden" },
+        { name: "Blauer Segelflossendoktorfisch", bild: blauersd, beschreibung: "Bunter Fisch aus Korallenriffen.", lebensraum: "Tropische Ozeane" },
+        { name: "Flamingo", bild: flamingo, beschreibung: "Rosa Vogel mit langen Beinen.", lebensraum: "Seen & Lagunen" },
+        { name: "Gorilla", bild: gorilla, beschreibung: "Intelligenter Menschenaffe.", lebensraum: "Tropische Regenwälder" },
+        { name: "Mausmaki", bild: mausmaki, beschreibung: "Kleiner nachtaktiver Primat.", lebensraum: "Madagaskar" },
+        { name: "Seehund", bild: seehund, beschreibung: "Meeresbewohner mit Flossen.", lebensraum: "Küstenregionen" },
+        { name: "Braunbär", bild: baer, beschreibung: "Großer Bär mit dichtem Fell.", lebensraum: "Wälder & Berge" },
     ];
 
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
+        <div
+            style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(4, 1fr)",
+                gap: "16px",
+                padding: "16px"
+            }}
+        >
             {tiere.map((tier, index) => (
-                <Tierinfo key={index} {...tier} />
+                <TierCard key={index} {...tier} />
             ))}
         </div>
     );
 };
-
 export default Zoo;
