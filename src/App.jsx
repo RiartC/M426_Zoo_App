@@ -5,6 +5,7 @@ import Impressum from "./Impressum";
 import Datenschutzhinweise from "./Datenschutzhinweise";
 import "./App.css";
 import Tierinfo from "./Tierinfo.jsx";
+import CookiePopup from "./CookiePopup.jsx";
 
 function Home() {
     return (
@@ -47,6 +48,7 @@ function App() {
     return (
         <Router>
             <Navbar />
+            <CookiePopup />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/impressum" element={<Impressum />} />
