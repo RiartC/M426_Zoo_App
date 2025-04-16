@@ -6,6 +6,10 @@ import Datenschutzhinweise from "./Datenschutzhinweise";
 import "./App.css";
 import Tierinfo from "./Tierinfo.jsx";
 import CookiePopup from "./CookiePopup.jsx";
+import MapPage from "./pages/MapPage.jsx";
+
+
+
 
 function Home() {
     return (
@@ -54,6 +58,7 @@ function App() {
                 <Route path="/impressum" element={<Impressum />} />
                 <Route path="/datenschutz" element={<Datenschutzhinweise />} />
                 <Route path="/tierinfo" element={<Tierinfo />} />
+                <Route path="/map" element={<MapPage />} />
             </Routes>
         </Router>
     );
