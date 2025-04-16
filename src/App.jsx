@@ -1,14 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./Navbar";
-import Impressum from "./Impressum";
-import Datenschutzhinweise from "./Datenschutzhinweise";
+import Navbar from "./navbar.jsx";
+import Impressum from "./impressum.jsx";
+import Datenschutzhinweise from "./datenschutzhinweise.jsx";
 import "./App.css";
-import Tierinfo from "./Tierinfo.jsx";
+import Tierinfo from "./tierinfo.jsx";
 import CookiePopup from "./CookiePopup.jsx";
-import MapPage from "./pages/MapPage.jsx";
-
-
+import TicketPage from "./ticket.jsx";
 
 
 function Home() {
@@ -58,7 +56,7 @@ function App() {
                 <Route path="/impressum" element={<Impressum />} />
                 <Route path="/datenschutz" element={<Datenschutzhinweise />} />
                 <Route path="/tierinfo" element={<Tierinfo />} />
-                <Route path="/map" element={<MapPage />} />
+                <Route path="/ticket" element={<TicketPage />} />
             </Routes>
         </Router>
     );
