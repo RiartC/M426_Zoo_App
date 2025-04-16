@@ -10,6 +10,7 @@ const Navbar = () => {
                 <li><Link to="/datenschutz" className="hover:underline">Datenschutzhinweise</Link></li>
                 <li><Link to="/tierinfo" className="hover:underline">Tierinfo</Link></li>
                 <li><Link to="/ticket" className="hover:underline">Ticketkauf</Link></li>
+                <li><Link to="/map" className="hover:underline">Map</Link></li>
             </ul>
         </nav>
     );

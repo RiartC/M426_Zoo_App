@@ -7,6 +7,7 @@ import "./App.css";
 import Tierinfo from "./tierinfo.jsx";
 import CookiePopup from "./CookiePopup.jsx";
 import TicketPage from "./ticket.jsx";
+import MapPage from "./pages/MapPage.jsx";
 
 
 function Home() {
@@ -57,6 +58,7 @@ function App() {
                 <Route path="/datenschutz" element={<Datenschutzhinweise />} />
                 <Route path="/tierinfo" element={<Tierinfo />} />
                 <Route path="/ticket" element={<TicketPage />} />
+                <Route path="/map" element={<MapPage />} />
             </Routes>
         </Router>
     );
